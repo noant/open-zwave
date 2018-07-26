@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="DebugDLL|Win32">
       <Configuration>DebugDLL</Configuration>
@@ -22,24 +22,29 @@
     <ProjectGuid>{497F9828-DEC2-4C80-B9E0-AD066CCB587C}</ProjectGuid>
     <RootNamespace>OpenZWave</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -206,6 +211,7 @@ exit 0</Command>
     <ClInclude Include="..\..\..\src\aes\brg_types.h" />
     <ClInclude Include="..\..\..\src\Bitfield.h" />
     <ClInclude Include="..\..\..\src\command_classes\AVSimple.h" />
+    <ClInclude Include="..\..\..\src\command_classes\AVSimpleCommandItem.h" />
     <ClInclude Include="..\..\..\src\command_classes\DeviceResetLocally.h" />
     <ClInclude Include="..\..\..\src\command_classes\DoorLock.h" />
     <ClInclude Include="..\..\..\src\command_classes\DoorLockLogging.h" />
@@ -313,6 +319,7 @@ exit 0</Command>
     <ClCompile Include="..\..\..\src\aes\aestab.c" />
     <ClCompile Include="..\..\..\src\aes\aes_modes.c" />
     <ClCompile Include="..\..\..\src\command_classes\AVSimple.cpp" />
+    <ClCompile Include="..\..\..\src\command_classes\AVSimpleCommandItem.cpp" />
     <ClCompile Include="..\..\..\src\command_classes\DeviceResetLocally.cpp" />
     <ClCompile Include="..\..\..\src\command_classes\DoorLock.cpp" />
     <ClCompile Include="..\..\..\src\command_classes\DoorLockLogging.cpp" />
